@@ -2,6 +2,8 @@ package com.konradlinkowski.ghrest.model;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Repo {
 
 	private String fullName;
@@ -23,22 +25,27 @@ public class Repo {
 		this.createdAt = createdAt;
 	}
 
+	@JsonProperty("full_name")
 	public String getFullName() {
 		return fullName;
 	}
 
+	@JsonProperty("description")
 	public String getDescription() {
 		return description;
 	}
 
+	@JsonProperty("clone_url")
 	public String getCloneUrl() {
 		return cloneUrl;
 	}
 
+	@JsonProperty("stargazers_count")
 	public int getStars() {
 		return stars;
 	}
 
+	@JsonProperty("created_at")
 	public Date getCreatedAt() {
 		return createdAt;
 	}
