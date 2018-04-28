@@ -20,7 +20,7 @@ public class RepoController {
 	private RepoService repoService;
 	
 	@RequestMapping(value="/repositories/{owner}/{repository-name}", method = RequestMethod.GET)
-	public Repo getUsers(@PathVariable("owner") String userName,
+	public Repo getRepo(@PathVariable("owner") String userName,
 			@PathVariable("repository-name") String repoName)
 					throws InterruptedException, ExecutionException {
 		CompletableFuture<Repo> repo = repoService.getRepo(userName, repoName);
