@@ -23,7 +23,6 @@ public class RepoService {
 	@Async
     public CompletableFuture<Repo> getRepo(String userName, String repoName) throws InterruptedException {
         String url = String.format("%s/repos/%s/%s", githubUrl, userName, repoName);
-        System.out.println(url);
         Repo results = restTemplate.getForObject(url, Repo.class);
         return CompletableFuture.completedFuture(results);
     }
