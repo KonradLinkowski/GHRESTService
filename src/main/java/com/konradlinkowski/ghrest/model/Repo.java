@@ -25,7 +25,7 @@ public class Repo {
 		this.createdAt = createdAt;
 	}
 
-	@JsonProperty("full_name")
+	@JsonProperty("fullName")
 	public String getFullName() {
 		return fullName;
 	}
@@ -35,37 +35,37 @@ public class Repo {
 		return description;
 	}
 
-	@JsonProperty("clone_url")
+	@JsonProperty("cloneUrl")
 	public String getCloneUrl() {
 		return cloneUrl;
 	}
 
-	@JsonProperty("stargazers_count")
+	@JsonProperty("stars")
 	public int getStars() {
 		return stars;
 	}
 
-	@JsonProperty("created_at")
+	@JsonProperty("createdAt")
 	public Date getCreatedAt() {
 		return createdAt;
 	}
-
+	@JsonProperty("full_name")
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
 	}
-
+	@JsonProperty("description")
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
+	@JsonProperty("clone_url")
 	public void setCloneUrl(String cloneUrl) {
 		this.cloneUrl = cloneUrl;
 	}
-
+	@JsonProperty("stargazers_count")
 	public void setStars(int stars) {
 		this.stars = stars;
 	}
-
+	@JsonProperty("created_at")
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
 	}
